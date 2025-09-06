@@ -1,6 +1,6 @@
 # Underwater UUV Simulation in Gazebo Sim
 
-This project provides a custom **Underwater Unmanned Underwater Vehicle (UUV) simulation** in **Gazebo Sim (v8.9)** with an underwater world environment.  
+This project provides a custom **Unmanned Underwater Vehicle (UUV) simulation** in **Gazebo Sim (v8.9)** with an underwater world environment.  
 The world includes a scaled **OceanFloorShipwreck** model and a custom-built `uuv_model` robot.
 
 The simulation uses Gazebo's **buoyancy** and **hydrodynamic drag plugins** to emulate underwater physics.
@@ -106,7 +106,14 @@ sudo apt install ros-jazzy-ros-gz
 sudo apt install ros-jazzy-gz-sim
 ```
 
-4. Set up environment variables
+4. Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/my_uuv_gz.git
+cd my_uuv_gz
+```
+
+5. Set up environment variables
 
 Add the models folder to Gazebo’s search path in your `~/.bashrc`:
 
