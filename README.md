@@ -1,11 +1,11 @@
 # Underwater UUV Simulation in Gazebo Sim
 
-![UUV Simulation](simulation_images/simulation_image.png)
-
 This project provides a custom **Underwater Unmanned Underwater Vehicle (UUV) simulation** in **Gazebo Sim (v8.9)** with an underwater world environment.  
 The world includes a scaled **OceanFloorShipwreck** model and a custom-built `uuv_model` robot.
 
 The simulation uses Gazebo's **buoyancy** and **hydrodynamic drag plugins** to emulate underwater physics.
+
+![UUV Simulation](simulation_images/simulation_image.png)
 
 ---
 
