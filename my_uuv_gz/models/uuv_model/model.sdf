@@ -1,0 +1,511 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="uuv_model">
+    <static>false</static>
+
+    <!-- Lower frame -->
+    <link name="frame_lower">
+      <visual name="frame_lower_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/frame_lower.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 0.8 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+      </material>
+      </visual>
+
+      <collision name="frame_lower_col">
+        <geometry>
+          <box>
+            <size>0.4 0.4 0.1</size> <!-- approximate dimensions -->
+          </box>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>5.0</mass>
+        <inertia>
+          <ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+
+    </link>
+
+    <!-- Upper frame -->
+    <link name="frame_upper">
+      <visual name="frame_upper_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/frame_upper.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 0.8 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+      </material>
+      </visual>
+
+      <collision name="frame_upper_col">
+        <geometry>
+          <box>
+            <size>0.4 0.4 0.1</size> <!-- approximate dimensions -->
+          </box>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>5.0</mass>
+        <inertia>
+          <ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <!-- Capsule glass -->
+    <link name="capsule_glass">
+      <visual name="capsule_glass_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_glass.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.3 0.5 0.3</ambient>
+          <diffuse>0.2 0.6 1 0.3</diffuse>
+          <specular>0.5 0.5 0.5 0.3</specular>
+          <emissive>0 0 0 0.3</emissive>
+        </material>
+      </visual>
+
+      <collision name="capsule_glass_col">
+        <geometry>
+          <sphere>
+            <radius>0.2</radius>
+          </sphere>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>2.0</mass>
+        <inertia>
+          <ixx>0.05</ixx><iyy>0.05</iyy><izz>0.05</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <!-- Capsule back cover -->
+    <link name="capsule_back_cover">
+      <visual name="capsule_back_cover_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_back_cover.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+       <material>
+          <ambient>0.2 0.2 0.2 1</ambient>
+          <diffuse>0.3 0.3 0.3 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="capsule_back_cover_col">
+        <geometry>
+          <box>
+            <size>0.3 0.3 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>3.0</mass>
+        <inertia>
+          <ixx>0.1</ixx><iyy>0.1</iyy><izz>0.05</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <!-- Capsule cylinder -->
+    <link name="capsule_cylinder">
+      <visual name="capsule_cylinder_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_cylinder.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- Add collision for physics -->
+      <collision name="capsule_cylinder_col">
+        <geometry>
+          <cylinder>
+            <radius>0.15</radius>
+            <length>0.8</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <!-- Add inertial for mass + inertia tensor -->
+      <inertial>
+        <mass>12.0</mass>
+        <inertia>
+          <ixx>0.5</ixx><iyy>0.5</iyy><izz>0.2</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+      
+
+    </link>
+
+    
+
+    <!-- Capsule front guard -->
+    <link name="capsule_front_guard">
+      <visual name="capsule_front_guard_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_front_guard.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.2 0.2 0.2 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="capsule_front_guard_col">
+        <geometry>
+          <box>
+            <size>0.3 0.3 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>2.0</mass>
+        <inertia>
+          <ixx>0.05</ixx><iyy>0.05</iyy><izz>0.02</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <!-- Capsule seal -->
+    <link name="capsule_seal">
+      <visual name="capsule_seal_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_seal.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.8 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="capsule_seal_col">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.02</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.01</ixx><iyy>0.01</iyy><izz>0.005</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <!-- Thrusters -->
+    <link name="thruster2">
+      <visual name="thruster2_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.2 0.2 0.2 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="thruster2_col">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.01</ixx><iyy>0.01</iyy><izz>0.005</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <link name="thruster3">
+      <visual name="thruster3_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster3.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.2 0.2 0.2 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="thruster3_col">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.01</ixx><iyy>0.01</iyy><izz>0.005</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <link name="thruster5">
+      <visual name="thruster5_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster5.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.2 0.2 0.2 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="thruster5_col">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.01</ixx><iyy>0.01</iyy><izz>0.005</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <link name="thruster6">
+      <visual name="thruster6_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster6.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.2 0.2 0.2 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="thruster6_col">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.01</ixx><iyy>0.01</iyy><izz>0.005</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <link name="thruster7">
+      <visual name="thruster7_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster7.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.2 0.2 0.2 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="thruster7_col">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.01</ixx><iyy>0.01</iyy><izz>0.005</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+    <link name="thruster8">
+      <visual name="thruster8_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster8.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.2 0.2 0.2 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="thruster8_col">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.01</ixx><iyy>0.01</iyy><izz>0.005</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+    </link>
+
+
+    <plugin name="gz::sim::systems::Hydrodynamics" filename="gz-sim-hydrodynamics-system">
+      <link_name>capsule_cylinder</link_name>
+      <fluid_density>1000</fluid_density>
+
+      <linear_drag>
+        <x>15.0</x>
+        <y>15.0</y>
+        <z>20.0</z>
+      </linear_drag>
+
+      <angular_drag>
+        <x>2.0</x>
+        <y>2.0</y>
+        <z>1.0</z>
+      </angular_drag>
+
+      <added_mass>
+        <xx>5.0</xx>
+        <yy>5.0</yy>
+        <zz>10.0</zz>
+      </added_mass>
+    </plugin>
+
+
+
+  </model>
+</sdf>

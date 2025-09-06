@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="uuv_model">
+    <static>false</static>
+
+    <!-- Lower frame -->
+    <link name="frame_lower">
+      <visual name="frame_lower_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/frame_lower.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Upper frame -->
+    <link name="frame_upper">
+      <visual name="frame_upper_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/frame_upper.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Capsule glass -->
+    <link name="capsule_glass">
+      <visual name="capsule_glass_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_glass.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Capsule back cover -->
+    <link name="capsule_back_cover">
+      <visual name="capsule_back_cover_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_back_cover.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Capsule cylinder -->
+    <link name="capsule_cylinder">
+      <visual name="capsule_cylinder_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_cylinder.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Capsule front guard -->
+    <link name="capsule_front_guard">
+      <visual name="capsule_front_guard_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_front_guard.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Capsule seal -->
+    <link name="capsule_seal">
+      <visual name="capsule_seal_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/capsule_seal.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Thrusters -->
+    <link name="thruster2">
+      <visual name="thruster2_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="thruster3">
+      <visual name="thruster3_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster3.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="thruster5">
+      <visual name="thruster5_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster5.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="thruster6">
+      <visual name="thruster6_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster6.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="thruster7">
+      <visual name="thruster7_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster7.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="thruster8">
+      <visual name="thruster8_visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>file:///home/qadruped/my_uuv_gz/models/uuv_model/meshes/thruster8.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+  </model>
+</sdf>

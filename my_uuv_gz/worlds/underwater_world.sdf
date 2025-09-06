@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <world name="underwater_world">
+
+    
+
+
+    <!-- gravity belongs directly under <world> in SDF 1.7 -->
+    <gravity>0 0 -9.81</gravity>
+
+    <physics name="ode" type="ode">
+        <max_step_size>0.001</max_step_size>
+        <real_time_update_rate>1000</real_time_update_rate>
+        <real_time_factor>1.0</real_time_factor>
+        <ode>
+            <solver>
+            <type>quick</type>
+            <iters>100</iters>
+            <sor>1.0</sor>
+            </solver>
+            <constraints>
+            <cfm>0.0</cfm>
+            <erp>0.2</erp>
+            <contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+            <contact_surface_layer>0.001</contact_surface_layer>
+            </constraints>
+        </ode>
+    </physics>
+
+
+    <!-- Blue-ish ambient, fog for underwater look -->
+    <scene>
+      <ambient>0.15 0.2 0.25 1</ambient>
+      <background>0.05 0.1 0.15 1</background>
+      <fog>
+        <type>exp</type>
+        <color>0.1 0.2 0.35 1</color>
+        <density>0.002</density>
+        <start>0</start>
+      </fog>
+      <shadows>false</shadows>
+    </scene>
+
+    
+    <model name="scaled_shipwreck">
+        <static>true</static>
+        <pose>0 0 -20 0 0 0</pose>
+        <link name="scale_link">
+            <visual name="scale_visual">
+            <geometry>
+                <mesh>
+                <uri>model://OceanFloorShipwreck/meshes/underwaterworld.dae</uri>
+                <scale>0.1 0.1 0.1</scale> <!-- scaling applied here -->
+                </mesh>
+            </geometry>
+            </visual>
+        </link>
+    </model>
+    
+    <!-- Water: huge semi-transparent box; top at z=0 (sea surface) -->
+    <model name="ocean_box">
+      <static>true</static>
+      <pose>0 0 -50 0 0 0</pose>
+      <link name="water">
+        <visual name="water_vis">
+          <geometry>
+            <box>
+              <size>500 500 100</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.05 0.15 0.3 0.5</ambient>
+            <diffuse>0.1 0.3 0.8 0.5</diffuse>
+            <specular>0.1 0.1 0.1 0.5</specular>
+          </material>
+        </visual>
+      </link>
+    </model> 
+    
+    
+
+
+    <!-- Spawn your UUV (requires model.config + GZ_SIM_RESOURCE_PATH set) -->
+    <include>
+      <uri>model://uuv_model</uri>
+      <name>uuv</name>
+      <pose>0 0 -1 0 0 0</pose> <!-- 1 m below surface -->
+    </include>
+
+    <!-- Lights -->
+    <light type="directional" name="sun">
+      <cast_shadows>false</cast_shadows>
+      <pose>100 0 100 0.1 0.4 0</pose>
+      <diffuse>0.6 0.6 0.6 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>-0.5 0 -1</direction>
+    </light>
+  </world>
+</sdf>
