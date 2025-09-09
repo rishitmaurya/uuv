@@ -109,7 +109,7 @@ sudo apt install ros-jazzy-gz-sim
 4. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/my_uuv_gz.git
+git clone https://github.com/rishitmaurya/my_uuv_gz.git
 cd my_uuv_gz
 ```
 
